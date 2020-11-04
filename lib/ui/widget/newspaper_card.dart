@@ -56,55 +56,7 @@ class _NewsPaperCardState extends State<NewsPaperCard> {
       ),
     );
 
-    //   Card(
-    //   elevation: 10,
-    //   shape: const RoundedRectangleBorder(
-    //     borderRadius: BorderRadius.all(
-    //       Radius.circular(8.0),
-    //     ),
-    //   ),
-    //   child: Container(
-    //     padding: EdgeInsets.all(3),
-    //     width: double.infinity,
-    //     height: MediaQuery.of(context).size.height / 7,
-    //     child: Row(
-    //       mainAxisSize: MainAxisSize.max,
-    //       crossAxisAlignment: CrossAxisAlignment.center,
-    //       mainAxisAlignment: MainAxisAlignment.center,
-    //       children: [
-    //         Column(
-    //           mainAxisSize: MainAxisSize.min,
-    //           children: [
-    //             Text(
-    //               "test",
-    //               style: TextStyle(
-    //                   fontSize: 20,
-    //                   color: Colors.black,
-    //                   fontWeight: FontWeight.w700),
-    //             ),
-    //             Text(
-    //               "\$15/月",
-    //               style: TextStyle(
-    //                   fontSize: 10,
-    //                   color: Colors.black,
-    //                   fontWeight: FontWeight.w700),
-    //             ),
-    //           ],
-    //         ),
-    //         Container(height: 20, child: VerticalDivider(color: Colors.red)),
-    //         Align(
-    //           alignment: Alignment.centerRight,
-    //           child: IconButton(
-    //             icon:
-    //             (_isSubscribed ? Icon(Icons.star) : Icon(Icons.star_border)),
-    //             color: Colors.red[500],
-    //             onPressed: _clickSubscribed,
-    //           ),
-    //         )
-    //       ],
-    //     ),
-    //   ),
-    // );
+  
   }
 
   void _clickSubscribed() {
