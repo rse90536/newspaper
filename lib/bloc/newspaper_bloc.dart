@@ -12,7 +12,9 @@ part 'newspaper_event.dart';
 part 'newspaper_state.dart';
 
 class NewspaperBloc extends Bloc<NewspaperEvent, NewspaperState> {
-  NewspaperBloc() : super(NewspaperInitial());
+  NewspaperBloc(
+    NewspaperState newsPaperInitial,
+  ) : super(NewspaperInitial());
 
   @override
   Stream<NewspaperState> mapEventToState(
@@ -21,17 +23,8 @@ class NewspaperBloc extends Bloc<NewspaperEvent, NewspaperState> {
     if (event is GetAllNewspaperEvent) {
       yield LoadingNewsPaper();
       try {
-        await Future.delayed(Duration(seconds: 2), () async* {
-          yield AllNewsPaperLoaded(newsPaperList: SharedData.newsPaperList);
-        });
-      } catch (e) {
-        yield FailedFetchData(errorMessage: e.toString());
-      }
-    }else if(event is GetSubNewspaperEvent){
-      try {
-        await Future.delayed(Duration(seconds: 2), () async* {
-          yield SubNewsPaperLoaded(newsPaperList: SharedData.newsPaperList.where((element) =>element.isSubscribed).toList());
-        });
+        await Future.delayed(Duration(seconds: 2));
+        yield AllNewsPaperLoaded(newsPaperList: SharedData.newsPaperList);
       } catch (e) {
         yield FailedFetchData(errorMessage: e.toString());
       }

@@ -19,23 +19,16 @@ class AllNewsPaperLoaded extends NewspaperState {
   final List<NewsPaperData> newsPaperList;
 
   AllNewsPaperLoaded({this.newsPaperList});
+
   @override
   String toString() {
     return "AllNewsPaperLoaded";
   }
 }
 
-class SubNewsPaperLoaded extends NewspaperState {
-  final List<NewsPaperData> newsPaperList;
-  SubNewsPaperLoaded({this.newsPaperList});
-  @override
-  String toString() {
-    return "SubNewsPaperLoaded";
-  }
-}
-
 class LoadingNewsPaper extends NewspaperState {
   const LoadingNewsPaper();
+
   @override
   String toString() {
     return "LoadingCarList";

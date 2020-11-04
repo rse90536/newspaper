@@ -11,6 +11,4 @@ class GetAllNewspaperEvent extends NewspaperEvent{
 
 }
 
-class GetSubNewspaperEvent extends NewspaperEvent{
 
-}
